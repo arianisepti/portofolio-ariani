@@ -6,27 +6,27 @@ export const projects = [
     title: 'Kimia Farma Big Data Analytics Project',
     image: '/kimiafarma.png',
     category: 'Data Analytics',
-    overview: 'Proyek analisis data yang berfokus pada evaluasi kinerja bisnis Kimia Farma berdasarkan data transaksi, cabang, produk, dan inventori. Data dari empat tabel diintegrasikan menggunakan Google BigQuery, kemudian dilakukan data quality check, analisis menggunakan SQL, dan visualisasi melalui Google Looker Studio.',
+    overview: 'A data analysis project focused on evaluating Kimia Farma\'s business performance based on transaction, branch, product, and inventory data. Data from four tables was integrated using Google BigQuery, followed by data quality checks, SQL analysis, and visualization through Google Looker Studio.',
     focus: ['Data Quality & Validation', 'SQL Analysis', 'Sales Analysis', 'Branch Performance', 'Product Analysis', 'Business Intelligence'],
     tools: ['Looker Studio', 'BigQuery', 'SQL'],
-    // DATA BARU UNTUK HALAMAN DETAIL
-    businessQuestion: '"Apakah penjualan kita menurun, dan wilayah mana yang paling terdampak?"',
+    // NEW DATA FOR DETAIL PAGE
+    businessQuestion: '"Did our sales decline, and which regions were most affected?"',
     insights: [
       {
-        title: 'Konteks Penurunan Pendapatan',
-        description: 'Pendapatan di wilayah Jawa Barat mengalami penurunan drastis sebesar 43,7% pada kuartal ke-2 tahun 2021. Hal ini sangat berkorelasi dengan diterapkannya kebijakan PPKM Darurat di wilayah tersebut.'
+        title: 'Revenue Decline Context',
+        description: 'Revenue in the West Java region experienced a drastic decline of 43.7% in the second quarter of 2021. This strongly correlates with the implementation of Emergency PPKM (Community Activity Restrictions) in the area.'
       },
       {
-        title: 'Performa Cabang',
-        description: 'Meskipun total transaksi tinggi, terdapat 15 cabang dengan rating transaksi (kepuasan pelanggan) yang berada di bawah rata-rata, mengindikasikan masalah pada layanan atau stok barang.'
+        title: 'Branch Performance',
+        description: 'Despite high total transactions, 15 branches had transaction ratings (customer satisfaction) below the average, indicating issues with service or stock availability.'
       },
       {
-        title: 'Kontribusi Produk',
-        description: 'Kategori produk "Alat Kesehatan" menyumbang 60% dari total pendapatan, namun kategori "Vitamin" memiliki margin keuntungan yang lebih tinggi.'
+        title: 'Product Contribution',
+        description: 'The "Medical Devices" product category accounted for 60% of total revenue, while the "Vitamins" category had a higher profit margin.'
       }
     ],
-    recommendation: 'Berdasarkan temuan tersebut, rekomendasi strategisnya adalah: (1) Melakukan evaluasi operasional pada 15 cabang dengan rating rendah. (2) Meningkatkan promosi silang (cross-selling) antara Alat Kesehatan dan Vitamin untuk menyeimbangkan pendapatan. (3) Menyiapkan strategi mitigasi penjualan jika terjadi pembatasan mobilitas di masa depan.',
-    outcome: 'Menghasilkan dashboard interaktif yang menyajikan insight terkait performa penjualan, profitabilitas, transaksi, cabang, provinsi, dan kategori produk sebagai dasar evaluasi kinerja bisnis dan pengambilan keputusan berbasis data.'
+    recommendation: 'Based on these findings, the strategic recommendations are: (1) Conduct operational evaluations at the 15 branches with low ratings. (2) Increase cross-selling promotions between Medical Devices and Vitamins to balance revenue. (3) Prepare sales mitigation strategies in case of future mobility restrictions.',
+    outcome: 'Produced an interactive dashboard presenting insights on sales performance, profitability, transactions, branches, provinces, and product categories as a basis for business performance evaluation and data-driven decision making.'
   },
   {
     id: 1,
@@ -34,22 +34,22 @@ export const projects = [
     title: 'Sales Data Analysis – Bike Store',
     image: '/bikestore.png',
     category: 'Data Analytics',
-    overview: 'Proyek analisis data yang berfokus pada analisis data transaksi toko sepeda untuk mengevaluasi performa penjualan dan menemukan insight bisnis. Dataset mencakup informasi pesanan, pelanggan, lokasi, produk, kategori, brand, toko, sales representative, jumlah unit terjual, revenue, dan tanggal pemesanan.',
+    overview: 'A data analysis project focusing on analyzing bike store transaction data to evaluate sales performance and discover business insights. The dataset includes information on orders, customers, locations, products, categories, brands, stores, sales representatives, units sold, revenue, and order dates.',
     focus: ['Sales Performance', 'Product Analysis', 'Category Analysis', 'Revenue Analysis'],
     tools: ['Excel', 'Python', 'Pandas'],
-    businessQuestion: '"Produk dan toko mana yang menjadi penopang utama penjualan, dan mana yang perlu dievaluasi?"',
+    businessQuestion: '"Which products and stores are the main drivers of sales, and which need evaluation?"',
     insights: [
       {
-        title: 'Tren Penjualan Tahunan',
-        description: 'Penjualan mengalami puncaknya pada tahun 2018, namun turun sebesar 15% di tahun 2019. Penurunan ini didominasi oleh kategori sepeda gunung (Mountain Bikes).'
+        title: 'Annual Sales Trends',
+        description: 'Sales peaked in 2018 but declined by 15% in 2019. This decline was predominantly driven by the Mountain Bikes category.'
       },
       {
-        title: 'Performa Toko & Staf',
-        description: 'Toko di wilayah Bali memiliki revenue tertinggi, namun toko di wilayah New York memiliki tingkat konversi sales representative yang lebih efisien.'
+        title: 'Store & Staff Performance',
+        description: 'Stores in the Bali region had the highest revenue, but stores in the New York region had more efficient sales representative conversion rates.'
       }
     ],
-    recommendation: 'Rekomendasi: (1) Melakukan audit pada lini produk Mountain Bikes tahun 2019 untuk melihat apakah ada masalah kualitas atau persaingan harga. (2) Membagikan best practice dari sales representative di New York ke cabang lain untuk meningkatkan konversi.',
-    outcome: 'Proyek ini menunjukkan penerapan teknik analisis data untuk mengubah data transaksi mentah menjadi informasi yang terstruktur dan insight bisnis yang dapat digunakan.'
+    recommendation: 'Recommendations: (1) Conduct an audit of the 2019 Mountain Bikes product line to check for quality issues or price competition. (2) Share best practices from the New York sales representatives with other branches to improve conversion.',
+    outcome: 'This project demonstrates the application of data analysis techniques to transform raw transaction data into structured information and actionable business insights.'
   },
   {
     id: 2,
@@ -57,22 +57,22 @@ export const projects = [
     title: 'Airline Delay Analysis',
     image: '/flight.png',
     category: 'Data Analytics',
-    overview: 'Proyek analisis data yang berfokus pada eksplorasi dan evaluasi keterlambatan penerbangan berdasarkan data maskapai dan bandara. Dataset mencakup informasi mengenai maskapai, bandara, lokasi, periode penerbangan, serta berbagai faktor penyebab keterlambatan seperti carrier delay, weather delay, dan arrival delay.',
+    overview: 'A data analysis project focusing on exploring and evaluating flight delays based on airline and airport data. The dataset includes information on airlines, airports, locations, flight periods, and various delay factors such as carrier delay, weather delay, and arrival delay.',
     focus: ['Delay Analysis', 'Comparative Analysis', 'Carrier Performance'],
     tools: ['Excel', 'Python', 'Pandas'],
-    businessQuestion: '"Faktor apa yang paling sering menyebabkan keterlambatan, dan maskapai mana yang paling terdampak?"',
+    businessQuestion: '"What factors most frequently cause delays, and which airlines are most affected?"',
     insights: [
       {
-        title: 'Penyebab Utama Delay',
-        description: 'Sebanyak 45% keterlambatan disebabkan oleh Carrier Delay (faktor internal maskapai), bukan cuaca (Weather Delay) seperti yang sering diasumsikan.'
+        title: 'Main Causes of Delay',
+        description: '45% of delays were caused by Carrier Delay (internal airline factors), rather than Weather Delay as is often assumed.'
       },
       {
-        title: 'Maskapai Paling Terdampak',
-        description: 'Maskapai X memiliki tingkat keterlambatan tertinggi pada rute domestik di musim liburan, dengan rata-rata delay 45 menit.'
+        title: 'Most Affected Airlines',
+        description: 'Airline X had the highest delay rate on domestic routes during the holiday season, with an average delay of 45 minutes.'
       }
     ],
-    recommendation: 'Rekomendasi: Maskapai perlu melakukan evaluasi internal pada manajemen jadwal kru dan perawatan pesawat untuk mengurangi Carrier Delay. Selain itu, komunikasi proaktif ke penumpang perlu ditingkatkan saat terjadi delay musiman.',
-    outcome: 'Proyek ini menunjukkan kemampuan dalam mengolah dan menganalisis dataset dengan berbagai variabel untuk menemukan pola, membandingkan performa, serta mengidentifikasi faktor yang berkontribusi terhadap suatu permasalahan.'
+    recommendation: 'Recommendation: Airlines need to conduct internal evaluations of crew scheduling and aircraft maintenance management to reduce Carrier Delays. Additionally, proactive communication with passengers needs to be improved during seasonal delays.',
+    outcome: 'This project demonstrates the ability to process and analyze datasets with multiple variables to find patterns, compare performance, and identify factors contributing to a problem.'
   },
   {
     id: 3,
@@ -80,21 +80,21 @@ export const projects = [
     title: 'COVID-19 Data Analysis',
     image: '/covid_19.png',
     category: 'Data Analytics',
-    overview: 'Proyek analisis data yang berfokus pada eksplorasi dan analisis statistik terkait kasus COVID-19. Dataset mencakup berbagai indikator seperti jumlah kematian, total kematian per populasi, case fatality rate, dan case recovered rate untuk memahami kondisi dan perkembangan pandemi berdasarkan data.',
+    overview: 'A data analysis project focusing on exploring and statistically analyzing COVID-19 cases. The dataset includes various indicators such as death counts, total deaths per population, case fatality rate, and case recovered rate to understand the conditions and development of the pandemic based on data.',
     focus: ['Health Data Analysis', 'Statistical Analysis', 'Mortality Analysis'],
     tools: ['Excel', 'Python', 'Pandas'],
-    businessQuestion: '"Seberapa efektif tingkat pemulihan di suatu wilayah dibandingkan dengan tingkat fatalitasnya?"',
+    businessQuestion: '"How effective is the recovery rate in a region compared to its fatality rate?"',
     insights: [
       {
-        title: 'Tingkat Fatalitas (CFR)',
-        description: 'Case Fatality Rate tertinggi terjadi pada gelombang pertama pandemi (2020), namun menurun drastis seiring dengan meningkatnya kapasitas testing dan fasilitas kesehatan.'
+        title: 'Fatality Rate (CFR)',
+        description: 'The highest Case Fatality Rate occurred during the first wave of the pandemic (2020), but declined drastically as testing capacity and healthcare facilities increased.'
       },
       {
-        title: 'Korelasi Pemulihan',
-        description: 'Terdapat korelasi positif antara jumlah kasus dengan tingkat pemulihan, mengindikasikan sistem kesehatan yang mampu merespons lonjakan kasus dengan baik pada periode tertentu.'
+        title: 'Recovery Correlation',
+        description: 'There is a positive correlation between the number of cases and the recovery rate, indicating a healthcare system capable of responding well to case surges during certain periods.'
       }
     ],
-    recommendation: 'Rekomendasi: Hasil analisis ini dapat digunakan oleh pembuat kebijakan untuk memfokuskan alokasi sumber daya kesehatan (seperti oksigen dan tempat tidur) di wilayah dengan CFR tinggi dan tingkat pemulihan yang lambat.',
-    outcome: 'Proyek ini menunjukkan kemampuan dalam mengolah dan menganalisis data kesehatan untuk menemukan pola dan insight melalui pendekatan eksploratif dan statistik.'
+    recommendation: 'Recommendation: The results of this analysis can be used by policymakers to focus the allocation of health resources (such as oxygen and hospital beds) in regions with high CFR and slow recovery rates.',
+    outcome: 'This project demonstrates the ability to process and analyze health data to find patterns and insights through exploratory and statistical approaches.'
   }
 ];

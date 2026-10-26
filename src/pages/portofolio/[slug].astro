@@ -1,0 +1,309 @@
+---
+// src/pages/portofolio/[slug].astro
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../data/projects";
+
+// Mendapatkan path URL dinamis untuk setiap proyek
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<Layout title={`${project.title} - Ariani Dwi Septi`}>
+  <main class="project-detail-section">
+    
+    <!-- HEADER PROYEK -->
+    <div class="project-header">
+      <a href="/#portofolio" class="back-link">← Kembali ke Portofolio</a>
+      <div class="project-category">{project.category}</div>
+      <h1 class="project-title">{project.title}</h1>
+      
+      <div class="project-tools">
+        {project.tools.map(tool => (
+          <span class="tool-badge">{tool}</span>
+        ))}
+      </div>
+    </div>
+
+    <!-- GAMBAR UTAMA -->
+    <div class="project-image-container">
+      <img src={project.image} alt={project.title} class="project-main-image" />
+    </div>
+
+    <!-- KONTEN DETAIL -->
+    <div class="project-content-wrapper">
+      
+      <!-- KIRI: INFO & DETAIL -->
+      <div class="project-main-content">
+        
+        <h2 class="content-heading">Overview</h2>
+        <p class="content-text">{project.overview}</p>
+
+        <!-- PERTANYAAN BISNIS -->
+        <div class="highlight-box question-box">
+          <h3 class="box-title">🎯 Business Question</h3>
+          <p class="box-text">{project.businessQuestion}</p>
+        </div>
+
+        <!-- INSIGHT -->
+        <h2 class="content-heading">Key Insights</h2>
+        <div class="insights-list">
+          {project.insights.map(insight => (
+            <div class="insight-card">
+              <h4 class="insight-title">{insight.title}</h4>
+              <p class="insight-desc">{insight.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- REKOMENDASI -->
+        <div class="highlight-box recommendation-box">
+          <h3 class="box-title">💡 Recommendation</h3>
+          <p class="box-text">{project.recommendation}</p>
+        </div>
+
+        <!-- HASIL AKHIR -->
+        <h2 class="content-heading">Project Outcome</h2>
+        <p class="content-text">{project.outcome}</p>
+
+      </div>
+
+      <!-- KANAN: SIDEBAR (Fokus & Tools) -->
+      <div class="project-sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-title">Focus Areas</h3>
+          <ul class="sidebar-list">
+            {project.focus.map(focus => (
+              <li>{focus}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>
+
+<style>
+  /* Gaya CSS Khusus untuk Halaman Detail Proyek */
+  .project-detail-section {
+    padding: 120px 2rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .project-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: #1677FF;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .project-category {
+    color: #1677FF;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .project-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0B1F44;
+    margin: 0.5rem 0 1rem;
+    line-height: 1.2;
+  }
+
+  .project-tools {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tool-badge {
+    background: #F5F9FF;
+    color: #1677FF;
+    border: 1px solid #DCE8F5;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .project-image-container {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(11, 31, 68, 0.1);
+    margin-bottom: 3rem;
+    border: 1px solid #E2EAF3;
+  }
+
+  .project-main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .project-content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .project-content-wrapper {
+      grid-template-columns: 1fr;
+    }
+    .project-title {
+      font-size: 1.8rem;
+    }
+    .project-detail-section {
+      padding-top: 100px;
+    }
+  }
+
+  .content-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0B1F44;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .content-heading:first-child {
+    margin-top: 0;
+  }
+
+  .content-text {
+    color: #475569;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Highlight Boxes */
+  .highlight-box {
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    border-left: 4px solid;
+  }
+
+  .question-box {
+    background: rgba(0, 212, 255, 0.05);
+    border-color: #00D4FF;
+  }
+
+  .recommendation-box {
+    background: rgba(0, 229, 160, 0.05);
+    border-color: #00E5A0;
+  }
+
+  .box-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0B1F44;
+    margin-bottom: 0.5rem;
+  }
+
+  .box-text {
+    color: #475569;
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  /* Insight Cards */
+  .insights-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .insight-card {
+    background: #FFFFFF;
+    border: 1px solid #E2EAF3;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 50, 90, 0.03);
+  }
+
+  .insight-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0B1F44;
+    margin-bottom: 0.5rem;
+  }
+
+  .insight-desc {
+    color: #475569;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Sidebar */
+  .project-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+
+  .sidebar-card {
+    background: #FFFFFF;
+    border: 1px solid #E2EAF3;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(11, 31, 68, 0.05);
+  }
+
+  .sidebar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0B1F44;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #F1F5F9;
+  }
+
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.75rem;
+    color: #475569;
+    font-size: 0.9rem;
+  }
+
+  .sidebar-list li::before {
+    content: "•";
+    color: #1677FF;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+</style>

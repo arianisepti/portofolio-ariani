@@ -236,7 +236,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <div class="about-skill">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14C8C4" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            Software Testing
+            Power BI
           </div>
           <div class="about-skill">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#14C8C4" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M8 2v20"/><path d="M16 2v20"/><path d="M2 8h20"/><path d="M2 16h20"/></svg>
@@ -248,11 +248,11 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <div class="about-skill">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            Java
+            Software Testing
           </div>
           <div class="about-skill">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1677FF" stroke-width="2"><path d="M21 12v-2a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v2"/><circle cx="12" cy="16" r="5"/><path d="M12 11v5"/></svg>
-            JavaScript
+            Excel
           </div>
         </div>
         
@@ -289,8 +289,8 @@ import Layout from "../layouts/Layout.astro";
       
       <!-- ===== HEADING ===== -->
       <div class="education-header reveal">
-        <h2 class="education-heading">Pendidikan &amp; Sertifikasi</h2>
-        <p class="education-subheading">Perjalanan akademik dan pengembangan kompetensi</p>
+        <h2 class="education-heading">Education &amp; Certification</h2>
+        <p class="education-subheading">Academic journey and competency development</p>
         <div class="education-underline"></div>
       </div>
       
@@ -587,7 +587,7 @@ import Layout from "../layouts/Layout.astro";
                 <span class="portfolio-tech-badge">BigQuery</span>
                 <span class="portfolio-tech-badge">SQL</span>
               </div>
-              <a href="#" class="portfolio-card-cta" data-project="0">Lihat Proyek <span class="arrow">→</span></a>
+              <a href="/portofolio/kimia-farma" class="portfolio-card-cta" data-project="0">Lihat Proyek <span class="arrow">→</span></a>
             </div>
           </div>
           
@@ -613,7 +613,7 @@ import Layout from "../layouts/Layout.astro";
                 <span class="portfolio-tech-badge">Python</span>
                 <span class="portfolio-tech-badge">Pandas</span>
               </div>
-              <a href="#" class="portfolio-card-cta" data-project="1">Lihat Proyek <span class="arrow">→</span></a>
+              <a href="/portofolio/bike-store" class="portfolio-card-cta" data-project="1">Lihat Proyek <span class="arrow">→</span></a>
             </div>
           </div>
           
@@ -639,7 +639,7 @@ import Layout from "../layouts/Layout.astro";
                 <span class="portfolio-tech-badge">Python</span>
                 <span class="portfolio-tech-badge">Pandas</span>
               </div>
-              <a href="#" class="portfolio-card-cta" data-project="2">Lihat Proyek <span class="arrow">→</span></a>
+              <a href="/portofolio/airline-delay" class="portfolio-card-cta" data-project="2">Lihat Proyek <span class="arrow">→</span></a>
             </div>
           </div>
           
@@ -665,7 +665,7 @@ import Layout from "../layouts/Layout.astro";
                 <span class="portfolio-tech-badge">Python</span>
                 <span class="portfolio-tech-badge">Pandas</span>
               </div>
-              <a href="#" class="portfolio-card-cta" data-project="3">View Project<span class="arrow">→</span></a>
+              <a href="/portofolio/covid-19" class="portfolio-card-cta" data-project="3">View Project<span class="arrow">→</span></a>
             </div>
           </div>
           
@@ -689,85 +689,8 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- ========================================== -->
-  <!-- MODAL PORTOFOLIO                           -->
-  <!-- ========================================== -->
-  <div class="portfolio-modal-overlay" id="portfolioModal">
-    <div class="portfolio-modal">
-      
-      <!-- Close Button -->
-      <button class="portfolio-modal-close" id="modalClose">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
-      </button>
-      
-      <!-- Modal Content -->
-      <div class="portfolio-modal-content">
-        
-        <!-- Kiri: Image -->
-        <div class="portfolio-modal-image">
-           <img id="modalImage" class="portfolio-modal-img" src="" alt="Project Detail" />
-        </div>
-        
-        <!-- Kanan: Info -->
-        <div class="portfolio-modal-info">
-          
-          <!-- Category Badge -->
-          <div class="portfolio-modal-category">
-            <span class="modal-category-badge" id="modalCategory">Data Analytics</span>
-          </div>
-          
-          <!-- Title -->
-          <h2 class="portfolio-modal-title" id="modalTitle">Kimia Farma Performance Dashboard</h2>
-          
-          <!-- Overview -->
-          <p class="portfolio-modal-overview" id="modalOverview">
-            Dashboard interaktif yang dikembangkan untuk menganalisis performa bisnis Kimia Farma berdasarkan data periode 2020–2023.
-          </p>
-          
-          <!-- Focus -->
-          <div class="portfolio-modal-focus">
-            <h4 class="portfolio-modal-label">Focus</h4>
-            <div class="portfolio-modal-tags" id="modalFocus">
-              <span class="modal-tag">Business Performance Analysis</span>
-              <span class="modal-tag">Sales Analysis</span>
-              <span class="modal-tag">Branch Performance</span>
-            </div>
-          </div>
-          
-          <!-- Tools -->
-          <div class="portfolio-modal-tools">
-            <h4 class="portfolio-modal-label">Tools</h4>
-            <div class="portfolio-modal-tags" id="modalTools">
-              <span class="modal-tag blue">Looker Studio</span>
-              <span class="modal-tag blue">BigQuery</span>
-            </div>
-          </div>
-          
-          <!-- Key Insights -->
-          <div class="portfolio-modal-insights">
-            <h4 class="portfolio-modal-label">Key Insights</h4>
-            <ul class="portfolio-modal-insight-list" id="modalInsights">
-              <li>Mengidentifikasi provinsi dengan total transaksi tertinggi</li>
-              <li>Membandingkan profit antarprovinsi</li>
-              <li>Mengidentifikasi cabang dengan rating transaksi yang rendah</li>
-            </ul>
-          </div>
-          
-          <!-- Outcome -->
-          <div class="portfolio-modal-outcome">
-            <h4 class="portfolio-modal-label">Project Outcome</h4>
-            <p class="portfolio-modal-outcome-text" id="modalOutcome">
-              Dashboard digunakan sebagai media visualisasi untuk membantu memahami performa bisnis.
-            </p>
-          </div>
-          
-        </div>
-        
-      </div>
-    </div>
-  </div>
 
-  <!-- ========================================== -->
+    <!-- ========================================== -->
   <!-- PENGALAMAN                                 -->
   <!-- ========================================== -->
   <section id="pengalaman" class="experience-section">
@@ -982,16 +905,6 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <!-- ========================================== -->
-  <!-- LIGHTBOX (Gambar Diperbesar)               -->
-  <!-- ========================================== -->
-  <div class="lightbox-overlay" id="lightboxOverlay">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
-    </button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="Zoomed Image" />
-  </div>
-
-        <!-- ========================================== -->
   <!-- KEAHLIAN                                   -->
   <!-- ========================================== -->
   <section id="keahlian" class="skills-section">
@@ -1332,81 +1245,7 @@ import Layout from "../layouts/Layout.astro";
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== PROJECT DATA =====
-    var projects = [
-      {
-        id: 0,
-        title: 'Kimia Farma Big Data Analytics Project',
-        image: '/kimiafarma.png',
-        category: 'Data Analytics',
-        emoji: '📊',
-        overview: 'Proyek analisis data yang berfokus pada evaluasi kinerja bisnis Kimia Farma berdasarkan data transaksi, cabang, produk, dan inventori. Data dari empat tabel diintegrasikan menggunakan Google BigQuery, kemudian dilakukan data quality check, analisis menggunakan SQL, dan visualisasi melalui Google Looker Studio untuk menghasilkan insight terkait penjualan, profitabilitas, performa wilayah, cabang, dan kategori produk.',
-        focus: ['Data Quality & Validation', 'SQL Analysis', 'Sales Analysis', 'Branch Performance', 'Product Analysis', 'Business Intelligence'],
-        tools: ['Looker Studio', 'BigQuery', 'SQL'],
-        insights: [
-          'Mengidentifikasi provinsi dengan total transaksi tertinggi',
-          'Membandingkan profit antarprovinsi',
-          'Mengidentifikasi cabang dengan rating transaksi yang rendah',
-          'Menganalisis tren pendapatan selama periode 2020–2023',
-          'Mengidentifikasi kategori produk dengan kontribusi penjualan terbesar'
-        ],
-        outcome: 'Menghasilkan dashboard interaktif yang menyajikan insight terkait performa penjualan, profitabilitas, transaksi, cabang, provinsi, dan kategori produk sebagai dasar evaluasi kinerja bisnis dan pengambilan keputusan berbasis data.'
-      },
-      {
-        id: 1,
-        title: 'Sales Data Analysis – Bike Store',
-        image: '/bikestore.png',
-        category: 'Data Analytics',
-        emoji: '🚲',
-        overview: 'Proyek analisis data yang berfokus pada analisis data transaksi toko sepeda untuk mengevaluasi performa penjualan dan menemukan insight bisnis. Dataset mencakup informasi pesanan, pelanggan, lokasi, produk, kategori, brand, toko, sales representative, jumlah unit terjual, revenue, dan tanggal pemesanan.',
-        focus: ['Sales Performance', 'Product Analysis', 'Category Analysis', 'Revenue Analysis'],
-        tools: ['Excel', 'Python', 'Pandas'],
-        insights: [
-          'Mengidentifikasi perbedaan performa penjualan berdasarkan kategori dan brand produk',
-          'Membandingkan revenue dan jumlah unit terjual untuk memahami performa penjualan produk',
-          'Mengevaluasi performa penjualan berdasarkan toko dan sales representative',
-          'Menganalisis distribusi pelanggan dan performa penjualan berdasarkan wilayah',
-          'Menganalisis tren penjualan berdasarkan periode waktu'
-        ],
-        outcome: 'Proyek ini menunjukkan penerapan teknik analisis data untuk mengubah data transaksi mentah menjadi informasi yang terstruktur dan insight bisnis yang dapat digunakan.'
-      },
-      {
-        id: 2,
-        title: 'Airline Delay Analysis',
-        image: '/flight.png',
-        category: 'Data Analytics',
-        emoji: '✈️',
-        overview: 'Proyek analisis data yang berfokus pada eksplorasi dan evaluasi keterlambatan penerbangan berdasarkan data maskapai dan bandara. Dataset mencakup informasi mengenai maskapai, bandara, lokasi, periode penerbangan, serta berbagai faktor penyebab keterlambatan seperti carrier delay, weather delay, dan arrival delay.',
-        focus: ['Delay Analysis', 'Comparative Analysis', 'Carrier Performance'],
-        tools: ['Excel', 'Python', 'Pandas'],
-        insights: [
-          'Mengidentifikasi maskapai dengan tingkat keterlambatan yang relatif tinggi maupun rendah',
-          'Menganalisis bandara dan wilayah yang memiliki tingkat arrival delay yang berbeda',
-          'Mengidentifikasi faktor penyebab keterlambatan seperti carrier delay dan weather delay',
-          'Menganalisis perubahan pola keterlambatan berdasarkan periode waktu',
-          'Membandingkan kontribusi berbagai faktor terhadap total keterlambatan penerbangan'
-        ],
-        outcome: 'Proyek ini menunjukkan kemampuan dalam mengolah dan menganalisis dataset dengan berbagai variabel untuk menemukan pola, membandingkan performa, serta mengidentifikasi faktor yang berkontribusi terhadap suatu permasalahan.'
-      },
-      {
-        id: 3,
-        title: 'COVID-19 Data Analysis',
-        image: '/covid_19.png',
-        category: 'Data Analytics',
-        emoji: '🦠',
-        overview: 'Proyek analisis data yang berfokus pada eksplorasi dan analisis statistik terkait kasus COVID-19. Dataset mencakup berbagai indikator seperti jumlah kematian, total kematian per populasi, case fatality rate, dan case recovered rate untuk memahami kondisi dan perkembangan pandemi berdasarkan data.',
-        focus: ['Health Data Analysis', 'Statistical Analysis', 'Mortality Analysis'],
-        tools: ['Excel', 'Python', 'Pandas'],
-        insights: [
-          'Membandingkan tingkat kematian berdasarkan jumlah kematian per populasi',
-          'Menganalisis variasi Case Fatality Rate antar data',
-          'Mengidentifikasi perbedaan tingkat pemulihan berdasarkan Case Recovered Rate',
-          'Mengeksplorasi hubungan antara jumlah kasus, kematian, dan tingkat pemulihan',
-          'Menghasilkan insight untuk memahami pola perkembangan COVID-19 berdasarkan indikator kesehatan'
-        ],
-        outcome: 'Proyek ini menunjukkan kemampuan dalam mengolah dan menganalisis data kesehatan untuk menemukan pola dan insight melalui pendekatan eksploratif dan statistik.'
-      }
-    ];
+    
     
     // ===== DOM ELEMENTS =====
     var carousel = document.getElementById('portfolioCarousel');
@@ -1455,152 +1294,11 @@ import Layout from "../layouts/Layout.astro";
       });
     });
     
-    // ===== OPEN MODAL =====
-    function openModal(projectId) {
-      var project = projects[projectId];
-      if (!project) return;
-      
-      // Set content
-      document.getElementById('modalCategory').textContent = project.category;
-      document.getElementById('modalTitle').textContent = project.title;
-      document.getElementById('modalOverview').textContent = project.overview;
-      var modalImg = document.getElementById('modalImage') as HTMLImageElement;
-      if (modalImg) {
-        modalImg.src = project.image;
-        modalImg.alt = project.title;
-      }
-
-
-       // klik gambar untuk lightbox
-      var lightboxImg = document.getElementById('modalImage');
-      if (lightboxImg) {
-        lightboxImg.style.cursor = 'zoom-in';
-        lightboxImg.onclick = function() {
-          var lightbox = document.getElementById('lightboxOverlay');
-          var lightboxImgEl = document.getElementById('lightboxImg');
-          if (lightbox && lightboxImgEl) {
-            lightboxImgEl.setAttribute('src', project.image);
-            lightbox.classList.add('open');
-            document.body.style.overflow = 'hidden';
-          }
-        };
-      }
-      
-      // Focus
-      var focusContainer = document.getElementById('modalFocus');
-      focusContainer.innerHTML = '';
-      project.focus.forEach(function(item) {
-        var tag = document.createElement('span');
-        tag.className = 'modal-tag';
-        tag.textContent = item;
-        focusContainer.appendChild(tag);
-      });
-      
-      // Tools
-      var toolsContainer = document.getElementById('modalTools');
-      toolsContainer.innerHTML = '';
-      project.tools.forEach(function(item) {
-        var tag = document.createElement('span');
-        tag.className = 'modal-tag blue';
-        tag.textContent = item;
-        toolsContainer.appendChild(tag);
-      });
-      
-      // Insights
-      var insightsContainer = document.getElementById('modalInsights');
-      insightsContainer.innerHTML = '';
-      project.insights.forEach(function(item) {
-        var li = document.createElement('li');
-        li.textContent = item;
-        insightsContainer.appendChild(li);
-      });
-      
-      // Outcome
-      document.getElementById('modalOutcome').textContent = project.outcome;
-      
-      // Show modal
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    
-    function closeModal() {
-      modal.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    
-    // ===== CARD CLICK =====
-    document.querySelectorAll('.portfolio-card, .portfolio-card-cta').forEach(function(el) {
-      el.addEventListener('click', function(e) {
-        e.preventDefault();
-        var projectId = this.dataset.project;
-        if (projectId !== undefined) {
-          openModal(parseInt(projectId));
-        } else {
-          var card = this.closest('.portfolio-card');
-          if (card) {
-            var id = card.dataset.project;
-            if (id !== undefined) {
-              openModal(parseInt(id));
-            }
-          }
-        }
-      });
-    });
-    
-    // ===== CLOSE MODAL =====
-    if (modalClose) {
-      modalClose.addEventListener('click', closeModal);
-    }
-    
-    modal.addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeModal();
-      }
-    });
-    
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeModal();
-      }
-    });
     
     // ===== UPDATE INDICATORS ON LOAD =====
     setTimeout(updateIndicators, 100);
 
-        // ===== LIGHTBOX CLOSE =====
-    var lightboxOverlay = document.getElementById('lightboxOverlay');
-    var lightboxClose = document.getElementById('lightboxClose');
-    var lightboxImg = document.getElementById('lightboxImg');
-    
-    function closeLightbox() {
-      if (lightboxOverlay) {
-        lightboxOverlay.classList.remove('open');
-        document.body.style.overflow = '';
-      }
-    }
-    
-    if (lightboxClose) {
-      lightboxClose.addEventListener('click', closeLightbox);
-    }
-    
-    if (lightboxOverlay) {
-      lightboxOverlay.addEventListener('click', function(e) {
-        if (e.target === this) {
-          closeLightbox();
-        }
-      });
-    }
-    
-    if (lightboxImg) {
-      lightboxImg.addEventListener('click', closeLightbox);
-    }
-    
-    // ESC key untuk close lightbox
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    });
+   
     
   });
 </script>

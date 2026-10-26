@@ -28,6 +28,117 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       /* RESET */
       * { margin: 0; padding: 0; box-sizing: border-box; }
       
+      /* ========================================== */
+      /* GLOBAL BACKGROUND (MOTIF & ANIMASI)        */
+      /* ========================================== */
+      .global-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -1; /* Di belakang semua konten */
+        background-color: #FAFCFF; /* Putih dengan sedikit nuansa biru */
+        overflow: hidden;
+        pointer-events: none; /* Agar tidak menghalangi klik */
+      }
+
+      /* 1. Motif Grid Halus */
+      .bg-grid {
+        position: absolute;
+        inset: 0;
+        background-image: 
+          linear-gradient(to right, rgba(22, 119, 255, 0.04) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(22, 119, 255, 0.04) 1px, transparent 1px);
+        background-size: 40px 40px;
+        /* Efek fade-out di pinggir */
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+      }
+
+      /* 2. Glow / Aurora Halus */
+      .bg-glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.4;
+        animation: floatGlow 15s ease-in-out infinite alternate;
+      }
+
+      .bg-glow-1 {
+        width: 500px;
+        height: 500px;
+        background: rgba(22, 119, 255, 0.2); /* Biru */
+        top: -10%;
+        left: -10%;
+      }
+
+      .bg-glow-2 {
+        width: 600px;
+        height: 600px;
+        background: rgba(20, 200, 196, 0.15); /* Cyan/Teal */
+        bottom: -20%;
+        right: -10%;
+        animation-delay: -5s;
+      }
+
+      @keyframes floatGlow {
+        0% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(50px, 30px) scale(1.1); }
+        100% { transform: translate(-30px, 50px) scale(0.9); }
+      }
+
+      /* 3. Partikel Mengambang */
+      .bg-particles {
+        position: absolute;
+        inset: 0;
+      }
+
+      .particle {
+        position: absolute;
+        bottom: -10px;
+        width: 4px;
+        height: 4px;
+        background: #1677FF;
+        border-radius: 50%;
+        opacity: 0;
+        animation: floatUp 15s linear infinite;
+        box-shadow: 0 0 10px 2px rgba(22, 119, 255, 0.4);
+      }
+
+      .particle:nth-child(even) {
+        background: #14C8C4; /* Cyan */
+        box-shadow: 0 0 10px 2px rgba(20, 200, 196, 0.4);
+        width: 3px;
+        height: 3px;
+      }
+
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.6;
+        }
+        90% {
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateY(-100vh);
+          opacity: 0;
+        }
+      }
+      
+      /* ===== SISA CSS ANDA ... ===== */
+      body {
+        font-family: 'Inter', 'Poppins', sans-serif;
+        /* background: #FFFFFF;  <-- INI KITA UBAH */
+        background: transparent; 
+        min-height: 100vh;
+        color: #0B1F44;
+        overflow-x: hidden;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      
       body {
         font-family: 'Inter', 'Poppins', sans-serif;
         background: #FFFFFF;
@@ -183,7 +294,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
         display: flex;
         align-items: center;
         padding-top: 72px;
-        background: #FFFFFF;
+        background: transparent;
         position: relative;
         overflow: hidden;
       }
@@ -192,7 +303,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       .hero-bg {
         position: absolute;
         inset: 0;
-        background: radial-gradient(ellipse at 70% 50%, #F5F9FF 0%, #FFFFFF 60%);
+        background: transparent;
         z-index: 0;
       }
       
@@ -801,7 +912,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       /* ========================================== */
       .about-section {
         padding: 4rem 0;
-        background: #FFFFFF;
+        background: transparent;
         position: relative;
         overflow: hidden;
       }
@@ -809,7 +920,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       .about-bg {
         position: absolute;
         inset: 0;
-        background: radial-gradient(ellipse at 30% 50%, #F5F9FF 0%, #FFFFFF 60%);
+        background: transparent;
         z-index: 0;
       }
       
@@ -1425,7 +1536,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       /* ========================================== */
       .portfolio-section {
         padding: 4rem 0;
-        background: #FFFFFF;
+        background: transparent;
         position: relative;
         overflow: hidden;
       }
@@ -1433,7 +1544,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       .portfolio-bg {
         position: absolute;
         inset: 0;
-        background: radial-gradient(ellipse at 50% 50%, #F5F9FF 0%, #FFFFFF 60%);
+        background: transparent;
         z-index: 0;
       }
       
@@ -2126,7 +2237,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       /* ========================================== */
       .experience-section {
         padding: 4rem 0;
-        background: #FFFFFF;
+        background: transparent;
         position: relative;
         overflow: hidden;
       }
@@ -2134,7 +2245,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       .experience-bg {
         position: absolute;
         inset: 0;
-        background: radial-gradient(ellipse at 50% 40%, #F5F9FF 0%, #FFFFFF 60%);
+        background: transparent;
         z-index: 0;
       }
       
@@ -2649,7 +2760,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       /* ========================================== */
       .skills-section {
         padding: 4rem 0;
-        background: #FFFFFF;
+        background: transparent;
         position: relative;
         overflow: hidden;
       }
@@ -2657,7 +2768,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       .skills-bg {
         position: absolute;
         inset: 0;
-        background: #FFFFFF;
+        background: transparent;
         z-index: 0;
       }
       
@@ -3525,6 +3636,31 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
     </style>
   </head>
   <body>
+
+       
+    <!-- ========================================== -->
+    <!-- GLOBAL BACKGROUND (MOTIF & ANIMASI)        -->
+    <!-- ========================================== -->
+    <div class="global-bg">
+      <div class="bg-grid"></div>
+      <div class="bg-glow bg-glow-1"></div>
+      <div class="bg-glow bg-glow-2"></div>
+      <div class="bg-particles">
+        <!-- Partikel akan dibuat otomatis oleh JS, atau bisa hardcode seperti ini -->
+        <span class="particle" style="left: 10%; animation-duration: 12s; animation-delay: 0s;"></span>
+        <span class="particle" style="left: 25%; animation-duration: 18s; animation-delay: 2s;"></span>
+        <span class="particle" style="left: 40%; animation-duration: 15s; animation-delay: 4s;"></span>
+        <span class="particle" style="left: 55%; animation-duration: 20s; animation-delay: 1s;"></span>
+        <span class="particle" style="left: 70%; animation-duration: 14s; animation-delay: 5s;"></span>
+        <span class="particle" style="left: 85%; animation-duration: 16s; animation-delay: 3s;"></span>
+        <span class="particle" style="left: 95%; animation-duration: 22s; animation-delay: 6s;"></span>
+      </div>
+    </div>
+    <!-- ========================================== -->
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+    ...
     
         <!-- ===== NAVBAR ===== -->
     <nav class="navbar" id="navbar">

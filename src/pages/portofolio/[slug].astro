@@ -28,6 +28,16 @@ const { project } = Astro.props;
           <span class="tool-badge">{tool}</span>
         ))}
       </div>
+
+      <!-- TAMBAHKAN BLOK INI UNTUK TOMBOL LIVE DASHBOARD -->
+      {project.slug === 'ecommerce-dashboard' && (
+        <div style="margin-top: 1.5rem;">
+          <a href="https://ariani-ecommerce-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-live">
+            🚀 Lihat Live Dashboard
+          </a>
+        </div>
+      )}
+
     </div>
 
     <!-- GAMBAR UTAMA -->
@@ -123,6 +133,24 @@ const { project } = Astro.props;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+  }
+
+    .btn-live {
+    display: inline-block;
+    background: #1677FF;
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(22, 119, 255, 0.3);
+  }
+
+  .btn-live:hover {
+    background: #0B5ED9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(22, 119, 255, 0.4);
   }
 
   .project-title {

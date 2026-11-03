@@ -96,5 +96,33 @@ export const projects = [
     ],
     recommendation: 'Recommendation: The results of this analysis can be used by policymakers to focus the allocation of health resources (such as oxygen and hospital beds) in regions with high CFR and slow recovery rates.',
     outcome: 'This project demonstrates the ability to process and analyze health data to find patterns and insights through exploratory and statistical approaches.'
+  },
+  {
+    id: 4,
+    slug: 'ecommerce-dashboard',
+    title: 'E-Commerce Public Dataset Dashboard',
+    image: '/ecommerce.jpg', 
+    category: 'Data Analytics',
+    overview: 'An interactive dashboard analyzing the E-Commerce Public Dataset (Jan 2017 – Aug 2018) as a submission for Dicoding Indonesia. The project covers product category revenue analysis, delivery time evaluation per state, and RFM customer segmentation.',
+    focus: ['Data Wrangling', 'Exploratory Data Analysis', 'RFM Segmentation', 'Data Visualization'],
+    tools: ['Python', 'Pandas', 'Streamlit', 'Matplotlib', 'Seaborn'],
+    businessQuestion: '"Which product categories drive the most revenue, how efficient is our delivery, and which customer segments should we prioritize for retention?"',
+    insights: [
+      {
+        title: 'Revenue Concentration',
+        description: 'Revenue is highly concentrated — only 16 out of 71 product categories contribute to ~79% of total revenue. The top three are health_beauty, watches_gifts, and bed_bath_table.'
+      },
+      {
+        title: 'Delivery Bottlenecks',
+        description: 'The national average delivery time is 12.46 days. States like RR, AP, and AM experience the longest delivery times (over 26 days), with RJ being a priority for improvement due to high volume and slow delivery.'
+      },
+      {
+        title: 'RFM Segmentation',
+        description: 'Potential Loyalists (31.20%) and At Risk (23.86%) customers make up the largest segments. Meanwhile, Champions (6.96%) contribute 14.65% of revenue with the highest average monetary value.'
+      }
+    ],
+    recommendation: 'Strategic recommendations: (1) Focus marketing efforts on Potential Loyalists to convert them into Champions. (2) Implement a win-back campaign for At Risk customers. (3) Investigate logistics in RJ state to improve delivery times for high-volume areas.',
+    outcome: 'Produced a fully functional, interactive Streamlit dashboard with multi-select filters for states and product categories, allowing stakeholders to explore sales, delivery, and customer data dynamically.'
+
   }
 ];

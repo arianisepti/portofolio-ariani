@@ -10,10 +10,10 @@ export const experiences = [
     overview: 'Analyzed business data to identify sales performance, revenue, profit, branch, and product trends using BigQuery and Looker Studio.',
     longDescription: 'During my virtual internship at Kimia Farma, I served as a Data Analyst responsible for exploring the company\'s historical data from 2020 to 2023. I collaborated with cross-functional teams to understand business requirements and translated them into efficient SQL queries in Google BigQuery. The analysis results were then visualized into a Looker Studio dashboard used by management to monitor key KPIs in real-time.',
     responsibilities: [
-      'Analyzed company sales and revenue data',
-      'Created interactive data visualizations using Looker Studio',
-      'Identified business trends and insights from 2020-2023 data',
-      'Presented analysis results in the form of dashboards and reports'
+      'Analyzed company sales and revenue data worth IDR 1.4 Trillion using SQL (BigQuery) and Python (Pandas) to validate financial metrics and support strategic business decisions',
+      'Created interactive data visualizations using Looker Studio to monitor the performance of the Top 10 branches, Profit Mapping, and Top 5 product categories, enabling management to track key metrics effectively',
+      'Identified business trends and insights from 2020–2023 data, discovering that revenue remained stagnant at around IDR 347–349 Billion per year and highlighting the need for growth strategy evaluation',
+      'Presented analysis results in the form of dashboards and reports to management, including the discovery of an anomaly in 5 branches with perfect service ratings (5.0) but low transaction ratings (3.82–3.94), along with concrete recommendations for UX and queue system improvements'
     ],
     tools: ['BigQuery', 'Looker Studio', 'SQL'],
     gallery: [
@@ -41,10 +41,10 @@ export const experiences = [
     overview: 'Contributed to the web application quality assurance process by conducting functional testing and ensuring features ran according to requirements.',
     longDescription: 'As a QA Engineer Intern, I was directly involved in the Software Development Life Cycle (SDLC) at PT GolekTruk Dot Com. My main focus was ensuring the quality of the web application before its release to users. I wrote test scenarios, created test cases, and automated testing using Playwright to accelerate the regression process.',
     responsibilities: [
-      'Created and executed test cases for functional testing',
-      'Performed automated testing using Playwright and Python',
-      'Identified and documented bugs into the tracking system',
-      'Validated web application test results prior to release'
+      'Developed and executed 100+ functional and regression test cases to ensure the quality of core application features, achieving 90% test coverage by designing comprehensive test scenarios based on business requirements',
+      'Automated 50+ testing scenarios to accelerate the validation process, successfully identifying and documenting 15 critical bugs prior to release by creating automated test scripts using Playwright and Python',
+      'Documented bug findings in a structured manner within the issue tracking system to expedite the developer resolution process, reducing the number of bugs escaping to production by detailing replication steps, severity levels, and fix priorities',
+      'Validated web application test results prior to end-user release, ensuring successful feature releases without critical errors by cross-checking automated test outputs against manual testing in the staging environment'
     ],
     tools: ['Playwright', 'Python', 'Manual Testing'],
     gallery: [

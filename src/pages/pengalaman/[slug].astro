@@ -18,7 +18,7 @@ const { exp } = Astro.props;
     
     <!-- HEADER -->
     <div class="exp-header">
-      <a href="/#pengalaman" class="back-link">← Kembali ke Pengalaman</a>
+      <a href="/#pengalaman" class="back-link">← Back to Experiences</a>
       
       <div class="exp-header-content">
         <div class="exp-logo">
@@ -41,10 +41,10 @@ const { exp } = Astro.props;
         <h2 class="content-heading">Overview</h2>
         <p class="content-text">{exp.overview}</p>
 
-        <h2 class="content-heading">Detail Peran</h2>
+        <h2 class="content-heading">Role Details</h2>
         <p class="content-text">{exp.longDescription}</p>
 
-        <h2 class="content-heading">Tanggung Jawab</h2>
+        <h2 class="content-heading">Responsibility</h2>
         <ul class="resp-list">
           {exp.responsibilities.map(item => (
             <li>{item}</li>
@@ -70,7 +70,7 @@ const { exp } = Astro.props;
     <!-- GALERI FOTO (JIKA ADA) -->
     {exp.gallery && exp.gallery.length > 0 && (
       <div class="exp-gallery-section">
-        <h2 class="content-heading">Dokumentasi Kegiatan</h2>
+        <h2 class="content-heading">Activity Documentation</h2>
         <div class="gallery-grid">
           {exp.gallery.map(img => (
             <div class="gallery-item">

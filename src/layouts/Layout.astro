@@ -1386,6 +1386,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
       }
       
       .education-cert-card {
+        position: relative;
         background: #FFFFFF;
         border: 1px solid #DCE8F5;
         border-radius: 8px;
@@ -1395,6 +1396,30 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
         gap: 0.5rem;
         box-shadow: 0 2px 8px rgba(15, 50, 90, 0.03);
         transition: all 0.25s ease;
+      }
+
+      
+      .cert-zoom-icon {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        font-size: 10px;
+        background: #F5F9FF;
+        border: 1px solid #DCE8F5;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.7;
+        transition: all 0.3s ease;
+      }
+
+      .education-cert-card:hover .cert-zoom-icon {
+        background: #1677FF;
+        color: white;
+        opacity: 1;
       }
       
       .education-cert-card:hover {
@@ -1651,6 +1676,17 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
         box-shadow: 0 3px 12px rgba(15, 50, 90, 0.04);
         transition: all 0.3s ease;
         cursor: pointer;
+
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        color: inherit;
+        height: 100%; 
+      }
+
+      .portfolio-card h3, 
+      .portfolio-card p {
+        color: inherit;
       }
       
       .portfolio-card:hover {
@@ -1760,6 +1796,7 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
         align-items: center;
         gap: 0.2rem;
         transition: all 0.3s ease;
+        margin-top: auto;
       }
       
       .portfolio-card-cta .arrow {
@@ -3633,6 +3670,92 @@ const { title, description = "Portofolio Ariani Dwi Septi" } = Astro.props;
           padding: 0.15rem 0 0.25rem;
         }
       }
+
+            /* ========================================== */
+      /* MODAL SERTIFIKAT                           */
+      /* ========================================== */
+      .cert-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(11, 31, 68, 0.8);
+        backdrop-filter: blur(8px);
+        z-index: 9999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .cert-modal-overlay.open {
+        display: flex;
+      }
+
+      .cert-modal-content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        width: 100%;
+      }
+
+      .cert-modal-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .cert-modal-close:hover {
+        background: #00D4FF;
+        color: #0B1F44;
+        transform: rotate(90deg);
+      }
+
+      /* Efek Hover pada Card Sertifikat */
+      .education-cert-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .portfolio-card:hover,
+      .experience-card:hover,
+      .education-cert-card:hover {
+        border-color: #1677FF !important;
+        box-shadow: 0 8px 24px rgba(22, 119, 255, 0.15) !important; 
+        transform: translateY(-2px);
+      }
+
+
+      /* Efek saat ditekan di HP (Tap Feedback) */
+    @media (max-width: 1024px) {
+      /* Card Portofolio, Pengalaman, Sertifikat */
+      .portfolio-card:active, 
+      .experience-card:active, 
+      .education-cert-card:active {
+        transform: scale(0.97) !important;
+        background-color: #F5F9FF;
+        transition: all 0.1s ease;
+      }
+      
+      /* Tombol */
+      .btn-primary:active, 
+      .btn-secondary:active,
+      .navbar-cta:active {
+        transform: scale(0.95) !important;
+        opacity: 0.8;
+      }
+    }
 
     </style>
   </head>
